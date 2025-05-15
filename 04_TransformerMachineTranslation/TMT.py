@@ -795,13 +795,12 @@ def predict(data, model, tokenizer_in, device='cuda'):
 
 
 if __name__ == "__main__":
-    # 设置工作目录
-    os.chdir(
-        r"C:\Users\zhangyehao\Desktop\2025courses\03_Deeplearning\homework\DeepLearningHomework\04_TransformerMachineTranslation\data")
+    # 设置工作目录(为了读取数据需要设置)
+    os.chdir("/home/wuyou/deeplearning/04_TransformerMachineTranslation")
     # 配置 logging
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-    en_path = r"C:\Users\zhangyehao\Desktop\2025courses\03_Deeplearning\homework\DeepLearningHomework\04_TransformerMachineTranslation\data\src.txt"
-    ch_path = r'C:\Users\zhangyehao\Desktop\2025courses\03_Deeplearning\homework\DeepLearningHomework\04_TransformerMachineTranslation\data\tgt.txt'
+    en_path = r"./data/src.txt"
+    ch_path = r"./data/tgt.txt"
     tokenizer = Tokenizer(en_path, ch_path, count_min=3)
-    train(epochs_num=30, batch_size=40)
+    train(epochs_num=100, batch_size=40)
 
