@@ -795,6 +795,9 @@ def predict(data, model, tokenizer_in, device='cuda'):
 
 
 if __name__ == "__main__":
+    # 设置工作目录
+    os.chdir(
+        r"C:\Users\zhangyehao\Desktop\2025courses\03_Deeplearning\homework\DeepLearningHomework\04_TransformerMachineTranslation\data")
     # 配置 logging
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     en_path = r"C:\Users\zhangyehao\Desktop\2025courses\03_Deeplearning\homework\DeepLearningHomework\04_TransformerMachineTranslation\data\src.txt"
